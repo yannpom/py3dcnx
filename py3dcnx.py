@@ -27,7 +27,7 @@ class SpaceMouse:
     def register_handler(self, handler, event='all', data=None):
         self.end = True
         self.thread.join(1)
-        if event is 'all':
+        if event == 'all':
             for e in event_types:
                 self.handlers[e] = handler
         elif event in event_types:
